@@ -1,0 +1,53 @@
+{% extends 'header.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+	<!-- END nav -->
+	
+	<section class="hero-wrap hero-wrap-2" style="background-image: url('{% static 'images/singer_00.jpg' %}');">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row no-gutters slider-text align-items-end justify-content-center">
+				<div class="col-md-9 ftco-animate pb-5 text-center">
+					<p class="breadcrumbs"><span class="mr-2"><a href="/">Home <i class="fa fa-chevron-right"></i></a></span> <span>Singer Lists <i class="fa fa-chevron-right"></i></span></p>
+					<h1 class="mb-0 bread">Singer Lists</h1>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="ftco-section bg-light">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="row">
+						{% for i in artist %}
+						<div class="col-md-4 d-flex align-items-stretch ftco-animate">
+							<div class="project-wrap">
+								<a href="#" class="img" >
+									<img src="{{i.artist_pic.url}}" height="270px" width="350px">
+									<span class="price">Singer</span>
+								</a>
+								<div class="text p-4">
+									<h3>{{i.artist_name}} - Singer</h3>
+								</div>
+								
+								 <div class="detail-box text-center pb-7" >
+                      				  <h5>
+                          					<a href="{% url 'instructor-details' pk=i.pk %}"><input type="button" value="Details" class="btn btn-primary"></a>
+                        			  </h5>
+                     			 </div>
+                     			 
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>
+{% endblock %}		

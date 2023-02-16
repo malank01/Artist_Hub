@@ -1,0 +1,35 @@
+{% extends 'artist_header.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+<!-- END nav -->
+
+<div class="hero-wrap js-fullheight" style="background-image: url('{% static 'images/bg_006.jpg' %}')";>
+  <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
+        <div class="col-md-10 ftco-animate">
+          <span class="subheading">Welcome to Artist Hub</span>
+          <h1 class="mb-4">All About The Artists</h1>
+          <p class="caps">Social media is not a media. The key is to listen, engage, and build relationships.</p>
+          <!-- <p class="mb-0"><a href="#" class="btn btn-primary">Our Course</a> <a href="#" class="btn btn-white">Learn More</a></p> -->
+        </div> 
+        <div class="detail-box text-center pb-9" >
+           <h5>
+              <a href="{% url 'contact-me' %}"><input type="button" value="Who Contact Me" class="btn btn-primary"></a>
+           </h5>
+        </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+</section>
+</body>
+</html>
+{% endblock %}

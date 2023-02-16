@@ -1,0 +1,55 @@
+{% extends 'artist_header.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <!-- END nav -->
+    
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('{% static 'images/artist_00.jpg' %}');">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text align-items-end justify-content-center">
+                <div class="col-md-9 ftco-animate pb-5 text-center">
+                    <p class="breadcrumbs"><span class="mr-2"><a href="/">Home <i class="fa fa-chevron-right"></i></a></span> <span>Artist Profile <i class="fa fa-chevron-right"></i></span></p>
+                    <h1 class="mb-0 bread">Artist Profile</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="ftco-section bg-light">
+        {% for i in artist %}
+  <div class="container">
+    <div class="row d-flex">
+      <div class="col-lg-4 ftco-animate">
+        <div class="blog-entry">
+          <div class="block-20">
+          <img src="{{ i.artist_pic.url }} " height="200px" width="350px">
+          </div>
+         <!--  <div class="text d-block">
+           <div class="meta">
+            <p>
+             <a href="#"><span class="fa fa-calendar mr-2"></span></a>
+             <a href="#"><span class="fa fa-user mr-2"></span>Admin</a>
+             <a href="#" class="meta-chat"><span class="fa fa-comment mr-2"></span> 3</a>
+           </p>
+         </div> -->
+         <h3>
+            <a href="">{{i.artist_name}}</a>
+         </h3>
+         <p>{{i.artist_desc}}</p>
+         <div class="text-center">
+         <a href="{% url 'blog-single' pk=i.pk %}" class="btn btn-secondary py-2 px-3">Read more</a>
+          </div>
+       </div>
+     </div>
+   </div>
+   {% endfor %}
+</section>  
+
+    </body>
+
+</html>
+{% endblock %}      

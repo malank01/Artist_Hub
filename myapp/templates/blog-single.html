@@ -1,0 +1,58 @@
+{% extends 'artist_header.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<body>
+ <!-- END nav -->
+ 
+ <section class="hero-wrap hero-wrap-2" style="background-image: url(' {% static 'images/bg_2.jpg' %}');">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row no-gutters slider-text align-items-end justify-content-center">
+      <div class="col-md-9 ftco-animate pb-5 text-center">
+       <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="fa fa-chevron-right"></i></a></span> <span class="mr-2"><a href="/">Profile <i class="fa fa-chevron-right"></i></a></span> <span>all deatails <i class="fa fa-chevron-right"></i></span></p>
+       <h1 class="mb-0 bread">Artist Details</h1>
+     </div>
+   </div>
+ </div>
+</section>
+
+<section class="ftco-section ftco-no-pt ftco-no-pb">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 ftco-animate py-md-5 mt-md-5">
+        <div class="about-artist">
+          <div class="bio mr-5">
+            <img src="{{artist.artist_pic.url}}" alt="" class="" height="300px" width="350px">
+          </div>
+          <div>
+        <h2 class="mb-3">
+          Name : {{artist.artist_name}}
+        </h2>
+        </div>
+          <div class="mb-3">
+            <h3>
+            about :  {{artist.artist_desc}}
+            </h3>
+          </div>
+          <div class="mb-3">
+            <h3>
+              Price Rs. {{artist.artist_price}}
+            </h3>
+          </div>
+          <div class="mb-3">
+            <h3>
+              Specialist : {{artist.artist_type}}
+            </h3>
+          </div>
+        </div>
+        <div class="text-center mr-2">
+         <a href="{% url 'artist-edit-details' pk=artist.pk %}" class="btn btn-secondary py-2 px-3">Edit Details</a>
+          </div>
+    </div>
+  </div>
+</section> <!-- .section -->	
+</body>
+</html>
+{% endblock %}

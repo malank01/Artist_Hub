@@ -1,0 +1,96 @@
+{% extends 'header.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+	<!-- END nav -->
+	
+	<section class="hero-wrap hero-wrap-2" style="background-image: url('{% static 'images/bg_003.webp' %}');">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row no-gutters slider-text align-items-end justify-content-center">
+				<div class="col-md-9 ftco-animate pb-5 text-center">
+					<p class="breadcrumbs"><span class="mr-2"><a href="/">Home <i class="fa fa-chevron-right"></i></a></span> <span>Artist Lists <i class="fa fa-chevron-right"></i></span></p>
+					<h1 class="mb-0 bread">Artist Lists</h1>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="ftco-section bg-light">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="row">
+						<div class="col-md-4 d-flex align-items-stretch ftco-animate">
+							<div class="project-wrap">
+									<a href="{% url 'singer' %}" class="img" style="background-image: url('{% static 'images/singer_00.jpg' %}');">
+										<span class="price">singer</span>
+									</a>
+								<div class="text p-4">
+									<h3><a href="#">Best </a> Singer</h3>
+								</div>							</div>
+						</div>
+						<div class="col-md-4 d-flex align-items-stretch ftco-animate">
+							<div class="project-wrap">
+									<a href="{% url 'standup' %}" class="img" style="background-image: url('{% static 'images/comedy_00.jpg' %}');">
+										<span class="price">StandUp Comedy</span>
+									</a>
+								<div class="text p-4">
+									<h3><a href="#">Best </a> StandUp</h3>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 d-flex align-items-stretch ftco-animate">
+							<div class="project-wrap">
+									<a href="{% url 'dancer' %}" class="img" style="background-image: url('{% static 'images/dancer_00.jpg' %}');">
+										<span class="price">Dancer</span>
+									</a>
+								<div class="text p-4">
+									<h3><a href="#">Best </a> Dancer</h3>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 d-flex align-items-stretch ftco-animate">
+							<div class="project-wrap">
+									<a href="{% url 'influencer' %}" class="img" style="background-image: url('{% static 'images/Influencer_00.jpg' %}');">
+										<span class="price">Influencer</span>
+									</a>
+								<div class="text p-4">
+									<h3><a href="#">Best </a> Influencer</h3>
+								</div>
+							</div>
+						</div>
+							<div class="col-md-4 d-flex align-items-stretch ftco-animate">
+							<div class="project-wrap">
+									<a href="{% url 'photographer' %}" class="img" style="background-image: url('{% static 'images/photographer_00.jpg' %}');">
+										<span class="price">Photographer</span>
+									</a>
+								<div class="text p-4">
+									<h3><a href="#">Best </a> Photographer</h3>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-4 d-flex align-items-stretch ftco-animate">
+							<div class="project-wrap">
+									<a href="{% url 'writer'%}" class="img" style="background-image: url('{% static 'images/writer_00.jpg' %}');">
+										<span class="price">Writer</span>
+									</a>
+								<div class="text p-4">
+									<h3><a href="#">Best </a> Writer</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>
+{% endblock %}		
