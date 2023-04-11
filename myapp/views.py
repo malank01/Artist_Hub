@@ -132,7 +132,8 @@ def book(request,pk):
 	Booking.objects.create(
 				user=user,
 				artist=artist,
-				artist_price=artist.artist_price
+				artist_price=artist.artist_price,
+				date=date,
 				)
 	books=Booking.objects.filter(user=user,payment_status=False)
 	return redirect('booking')
